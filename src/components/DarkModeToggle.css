@@ -1,0 +1,68 @@
+/* Dark Mode Toggle - General Styles */
+.dark-mode-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 25px;
+}
+
+/* Hide default checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Toggle Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color 0.4s ease-in-out;
+  border-radius: 25px;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: transform 0.4s ease-in-out;
+  border-radius: 50%;
+}
+
+/* Dark Mode Toggle Active */
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(calc(100% - 6px));
+}
+
+/* Accessibility: Focus Styles */
+input:focus-visible + .slider {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}

@@ -1,0 +1,73 @@
+/* Ensure Fullscreen Layout */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full height */
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* Main Content Wrapper */
+.main-content {
+  flex: 1; /* Expands to fill the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Navbar Styling */
+nav {
+  width: 100%;
+  padding: 15px 0;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer - Sticks to Bottom */
+footer {
+  width: 100%;
+  padding: 10px;
+  background: #1a1a1a;
+  text-align: center;
+  color: white;
+  margin-top: auto; /* Pushes footer to bottom when content is short */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-content {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,120 @@
+/* Projects Section */
+.projects {
+  text-align: center;
+  padding: 50px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projects h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #fbfbfb;
+  font-weight: bold;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* Stronger 3D effect */
+}
+
+/* Project List - Grid Layout */
+.projects ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px; /* Balanced spacing */
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+/* Responsive Grid */
+@media screen and (min-width: 768px) {
+  .projects ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Individual Project Card */
+.projects li {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2), -8px -8px 20px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lift Effect on Hover */
+.projects li:hover {
+  transform: translateY(-10px);
+  box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.3), -12px -12px 30px rgba(255, 255, 255, 0.5);
+}
+
+/* Project Titles */
+.projects h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #222;
+}
+
+/* Project Buttons */
+.projects a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Hover Effect */
+.projects a:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Dark Mode Compatibility */
+.dark-mode .projects li {
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7), -8px -8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .projects h1 {
+  color: #f8f9fa;
+}
+
+.dark-mode .projects h3 {
+  color: #e0e0e0;
+}
+
+.dark-mode .projects a {
+  background-color: #0a84ff;
+}
+
+.dark-mode .projects a:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .projects h1 {
+    font-size: 2.2rem;
+  }
+
+  .projects h3 {
+    font-size: 1.4rem;
+  }
+
+  .projects a {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
